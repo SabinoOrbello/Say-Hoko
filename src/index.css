@@ -1,0 +1,258 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&family=Sedan:ital@0;1&display=swap");
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-image: url(./assets/img/75982.jpg) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.back {
+  background-image: url(./assets/img/75982.jpg) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.golden-button {
+  width: 120px;
+  height: 50px;
+  position: relative;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+  border: none;
+  background-color: #927c07;
+  transition: all 0.2s ease;
+}
+.golden-button:hover {
+  transform: scale(0.96);
+}
+.golden-button:before,
+.golden-button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+.golden-button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #927c07 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #927c07 20%, transparent 30%),
+    radial-gradient(circle, #927c07 20%, transparent 20%), radial-gradient(circle, #927c07 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #927c07 15%, transparent 20%),
+    radial-gradient(circle, #927c07 20%, transparent 20%), radial-gradient(circle, #927c07 20%, transparent 20%),
+    radial-gradient(circle, #927c07 20%, transparent 20%), radial-gradient(circle, #927c07 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: topBubbles 1s ease;
+}
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+.golden-button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #cca300 20%, transparent 20%),
+    radial-gradient(circle, #cca300 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #cca300 15%, transparent 20%),
+    radial-gradient(circle, #cca300 20%, transparent 20%), radial-gradient(circle, #cca300 20%, transparent 20%),
+    radial-gradient(circle, #cca300 20%, transparent 20%), radial-gradient(circle, #cca300 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: bottomBubbles 1s ease;
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+.card16 {
+  width: 180px;
+  min-height: 280px;
+  color: #f5f5f5;
+  background-color: #353535;
+  font-family: "Inter", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+}
+
+/* Assicurati che il contenitore delle card utilizzi Flexbox in modo appropriato */
+.d-flex.flex-wrap.gap-28 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px; /* Assicurati che il gap sia applicato correttamente */
+  align-items: stretch; /* Questo farà sì che le card si estendano per adattarsi, ma potrebbe non essere necessario con min-height */
+}
+
+.card16:hover {
+  transform: scale(1.1);
+}
+
+.card16-header img {
+  height: 100px;
+  width: 100%;
+  border-bottom-right-radius: 50%;
+  display: grid;
+  place-items: center;
+  object-fit: cover; /* Aggiungi questa linea */
+}
+
+.card16-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuisce il contenuto lungo l'asse verticale */
+  padding: 8px;
+  flex: 1; /* Assicura che il contenitore si estenda per occupare tutto lo spazio disponibile */
+}
+
+.card16-title {
+  font-size: 6px;
+  font-weight: bold;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  color: #dac23e;
+}
+
+.card16-text {
+  font-size: 16px;
+}
+.card16-text:last-child {
+  flex-grow: 1; /* Occupa tutto lo spazio disponibile, spingendo il bottone verso il basso */
+}
+
+.card16-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(to left, #927c07, #be9d08);
+  margin-top: 1rem;
+}
+
+.card16-btn:hover {
+  background: linear-gradient(to left, #6e5b05, #c99b05);
+}
+
+.gold {
+  color: #c6a937;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.image1 {
+  left: 101px;
+  top: 76px;
+}
+
+.image2 {
+  left: -16px; /* Sposta l'immagine di 50px a sinistra */
+}
+
+.sushi3 {
+  background-image: url("./assets/img/rist-sushi.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 400px rgba(0, 0, 0, 0.5);
+}
+
+/* Aggiungi questo stile nel tuo file CSS */
+.carousel-img {
+  width: 100%; /* Assicura che l'immagine riempia il contenitore */
+  height: 500px; /* Imposta un'altezza fissa */
+  object-fit: cover;
+  /* Mantiene il rapporto d'aspetto senza tagliare l'immagine */
+}
+
+.carousel-item {
+  transition: transform 5s ease !important; /* Rende la transizione più lenta */
+}
+
+.sticky-top {
+  top: 0;
+  z-index: 1020; /* Assicurati che sia sopra altri contenuti ma sotto eventuali navbar o header fissi */
+  max-height: 100vh;
+  overflow-y: auto; /* Permette lo scroll interno se gli elementi eccedono l'altezza dello schermo */
+}
+
+.card-uniforme {
+  min-height: 300px;
+}
+
+/* Aggiungi questo al tuo foglio di stile CSS */
+.card-bordo-dorato {
+  border: 2px solid rgb(117, 104, 26) !important; /* Sostituisci 'gold' con il codice esadecimale del colore dorato che preferisci */
+  border-radius: 5px !important;
+  transition: box-shadow 0.3s ease, border 0.3s ease; /* Opzionale: aggiunge bordi arrotondati alla card */
+}
+
+.card-bordo-dorato:hover {
+  border: 2px solid transparent !important; /* Rimuove il bordo dorato */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Aggiunge un'ombra bianca (aggiusta l'opacità secondo necessità) */
+}
