@@ -10,10 +10,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url(./assets/img/75982.jpg) !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: linear-gradient(to bottom, #0f0f0e, #333216, #5d5618, #907a14, #cb9f07);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,22 +19,23 @@
 }
 
 .back {
-  background-image: url(./assets/img/75982.jpg) !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: linear-gradient(to bottom, #0f0f0e, #333216, #5d5618, #907a14, #cb9f07);
 }
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  font-family: "Playfair Display", serif; /* Puoi sostituire con 'Montserrat', 'Lora' a seconda delle tue preferenze */
+}
+
+body,
 p,
-label {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+a,
+span,
+li {
+  font-family: "Roboto", sans-serif; /* Puoi sostituire con 'Open Sans', 'Merriweather' a seconda delle tue preferenze */
 }
 
 .golden-button {
@@ -161,6 +159,54 @@ label {
   padding: 8px;
   flex: 1; /* Assicura che il contenitore si estenda per occupare tutto lo spazio disponibile */
 }
+.non {
+  text-decoration: none !important;
+}
+
+.footer {
+  background-color: #000 !important;
+  color: #fff;
+  border-top: 1px solid #c99b05;
+  margin-bottom: auto;
+}
+.text-gold {
+  color: #c99b05 !important;
+}
+
+.footer-heading {
+  font-size: 1.5rem;
+  color: #d4af37; /* Colore dorato */
+  margin-bottom: 1rem;
+}
+.higt {
+  min-height: 100vh;
+}
+.footer-link {
+  color: #d4af37; /* Colore dorato */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.footer .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.footer li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-link .me-2 {
+  margin-right: 0.5rem;
+}
 
 .card16-title {
   font-size: 6px;
@@ -255,4 +301,34 @@ label {
 .card-bordo-dorato:hover {
   border: 2px solid transparent !important; /* Rimuove il bordo dorato */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Aggiunge un'ombra bianca (aggiusta l'opacità secondo necessità) */
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+  color: white;
+}
+
+.original-total {
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+
+.discounted-total {
+  font-weight: bold;
+}
+
+.sushi0 {
+  background-image: url("./assets/img/rist-sushi.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 400px rgba(0, 0, 0, 0.8);
+}
+
+.higt1 {
+  min-height: 50vh;
 }

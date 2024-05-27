@@ -3,10 +3,17 @@ import risto1 from "../assets/img/corridoio-tavoli-ristorante-sushi.jpg";
 import risto2 from "../assets/img/migliori-sushi-milano-fingers-garden.jpg";
 import risto3 from "../assets/img/rist-sushi.jpg";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function Hero() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" data-aos="zoom-in-up" data-aos-duration="2000" data-aos-delay="400">
       <Carousel>
         <Carousel.Item interval={1000}>
           <div
@@ -33,7 +40,7 @@ function Hero() {
               }}
             >
               <h3 className="fw-bold">Benvenuto d Say-Hoko</h3>
-              <p>Il punto di riferimento per la cucina giapponese a Canosa</p>
+              <p className="mb-5">Il punto di riferimento per la cucina giapponese a Canosa</p>
               <Link to="/ordina" className=" golden-button text-decoration-none p-3">
                 Ordina ora
               </Link>
@@ -65,13 +72,13 @@ function Hero() {
               }}
             >
               <h3>Vieni a trovarci</h3>
-              <p>
+              <p className="mb-5">
                 Assapora l'eccellenza culinaria nel nostro ristorante : dove gusto e tradizione si fondono in un
                 esperienza indimenticabile!
               </p>
-              <button type="submit" className="golden-button">
+              <Link to="/info" type="submit" className="golden-button text-decoration-none pt-3">
                 Info
-              </button>
+              </Link>
             </Carousel.Caption>
           </div>
         </Carousel.Item>
@@ -99,11 +106,11 @@ function Hero() {
                 top: "75px", // Centra il testo se necessario
               }}
             >
-              <h3>Scopri di più sul nostro locale</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-              <button type="submit" className="golden-button">
-                Contatti
-              </button>
+              <h3>Sei un nuovo utente?</h3>
+              <p className="mb-5">Per te il 20% di sconto sul primo ordine</p>
+              <Link to="/register" type="submit" className="golden-button text-decoration-none pt-3">
+                Registrati
+              </Link>
             </Carousel.Caption>
           </div>
         </Carousel.Item>

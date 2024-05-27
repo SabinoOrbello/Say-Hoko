@@ -1,12 +1,19 @@
 import sushi1 from "../assets/img/Sushi-1.jpg";
 import sushi2 from "../assets/img/wagyu-gunkan-2400-1941.jpg";
 import Caros from "./Caros";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function Main() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <div className="container mt-5 w-100">
-        <div className="row">
+        <div className="row" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="400">
           <div className="col col-6">
             <img className="h-100 w-100" src={sushi1}></img>
           </div>
@@ -22,7 +29,7 @@ function Main() {
           </div>
         </div>
 
-        <div className="row mt-5 mb-5 pb-5">
+        <div className="row mt-5 mb-5 pb-5" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="400">
           <div className="col col-6 text-white">
             <p className="fw-bold gold">Say Hoko</p>
             <h1 className="fw-bold fs-2">Le nostre materie prime</h1>
@@ -47,7 +54,12 @@ function Main() {
           </div>
         </div>
       </div>
-      <div className="container-fluid sushi3 mt-5 p-5">
+      <div
+        className="container-fluid sushi3 mt-5 p-5"
+        data-aos="zoom-in-up"
+        data-aos-duration="2000"
+        data-aos-delay="400"
+      >
         <div className="container p-5">
           <div className="row text-white d-flex justify-content-center">
             <div className="col col-6"></div>
@@ -66,7 +78,7 @@ function Main() {
       </div>
       <Caros />
       <div className="container mt-5 py-3">
-        <div className="row">
+        <div className="row" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="400">
           <div className="col col-6 w-50">
             <img src={sushi1}></img>
           </div>

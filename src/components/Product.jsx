@@ -4,11 +4,14 @@ import { fetchProdotti } from "../redux/productSlice";
 import { addToCart } from "../redux/cartSlice";
 import Badge from "react-bootstrap/Badge";
 import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { list, status, error } = useSelector((state) => state.prodotti);
   const [categoriaSelezionata, setCategoriaSelezionata] = useState(null);
+  const [userRole, setUserRole] = useState(null);
 
   const categorie = [
     { CategorieId: 1, NomeCategoria: "Tartare" },
@@ -26,6 +29,7 @@ const Product = () => {
 
   useEffect(() => {
     dispatch(fetchProdotti());
+    setUserRole(localStorage.getItem("role"));
   }, [dispatch]);
 
   const handleAddToCart = (prodotto) => {
@@ -38,15 +42,19 @@ const Product = () => {
     }); // Nasconde il messaggio dopo 3 secondi
   };
 
+  const handleEditProduct = (id) => {
+    navigate(`/edit-product/${id}`); // Naviga alla pagina di modifica del prodotto
+  };
+
   return (
-    <div className="container-fluid p-5">
+    <div className="container-fluid p-5 mt-5">
       <div className="row">
         <div className="col-md-3 sticky-top">
-          <h1 className="text-white mb-4 fw-bold">Categorie</h1>
+          <h1 className="text-white mb-5 fw-bold">Categorie</h1>
           {categorie.map((categoria) => (
             <button
               key={categoria.CategorieId}
-              className="golden-button m-1"
+              className="golden-button m-2"
               onClick={() => setCategoriaSelezionata(categoria.CategorieId)}
             >
               {categoria.NomeCategoria}
@@ -54,7 +62,7 @@ const Product = () => {
           ))}
         </div>
         <div className="col-md-9">
-          <h1 className="text-white mb-4 fw-bold">Lista Prodotti</h1>
+          <h1 className="text-white mb-5 fw-bold">Menù</h1>
           {status === "loading" ? (
             <div>Caricamento...</div>
           ) : status === "failed" ? (
@@ -84,6 +92,11 @@ const Product = () => {
                       <button className="card16-btn" onClick={() => handleAddToCart(prodotto)}>
                         Aggiungi
                       </button>
+                      {userRole === "admin" && (
+                        <button className="card16-btn" onClick={() => handleEditProduct(prodotto.prodottoId)}>
+                          Modifica
+                        </button>
+                      )}
                     </div>
                   </div>
                 ))}

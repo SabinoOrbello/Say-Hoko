@@ -25,8 +25,8 @@ const Cart = () => {
 
   return (
     <>
-      <div className="container mt-5 text-white">
-        <h2 className="text-center">Carrello</h2>
+      <div className="container mt-5 text-white higt1">
+        <h2 className="text-center p-5">Carrello</h2>
         {cartItems.length === 0 && (
           <div className="alert alert-warning" role="alert">
             Non ci sono articoli nel carrello.

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../redux/registrationSlice";
 import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 
 function RegistrationForm() {
   const [nome, setNome] = useState("");
@@ -52,7 +53,12 @@ function RegistrationForm() {
     }
 
     dispatch(registerUser({ nome, cognome, email, password, telefono, Role: "utente" }));
-    navigate("/");
+
+    // Mostra un modal di SweetAlert con il messaggio di sconto dopo la registrazione
+    swal("Complimenti!", "Il primo acquisto avrà uno sconto del 20% sulla spesa totale.", "success").then(() => {
+      // Reindirizza l'utente alla home dopo che l'utente ha confermato il messaggio di SweetAlert
+      navigate("/");
+    });
 
     setNome("");
     setCognome("");

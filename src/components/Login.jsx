@@ -27,7 +27,11 @@ export default function Login() {
         const decodedToken = KJUR.jws.JWS.parse(token).payloadObj;
         console.log(decodedToken);
         const loggedInUserName = decodedToken.given_name;
-        const userId = decodedToken.unique_name; // Assumendo che l'ID dell'utente sia salvato come `userId` nel token
+        const userId = decodedToken.unique_name;
+
+        const userRole = decodedToken.role;
+        console.log(userRole); // Assumendo che il ruolo dell'utente sia salvato come `role` nel token
+        localStorage.setItem("role", userRole); // Assumendo che l'ID dell'utente sia salvato come `userId` nel token
 
         setLoggedInUser(loggedInUserName);
 

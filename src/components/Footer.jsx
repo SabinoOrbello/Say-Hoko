@@ -1,47 +1,78 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 function Footer() {
   return (
-    <footer className="footer mt-auto py-3 bg-dark text-white">
+    <footer className="footer mt-auto py-5  text-white w-100">
       <div className="container">
         <div className="row">
           <div className="col-md-4">
-            <h5>Company</h5>
+            <h5 className="footer-heading">Company</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#">About Us</a>
+                <a href="#" className="footer-link">
+                  About Us
+                </a>
               </li>
               <li>
-                <a href="#">Contact Us</a>
+                <a href="#" className="footer-link">
+                  Contact Us
+                </a>
               </li>
               <li>
-                <a href="#">Careers</a>
+                <a href="#" className="footer-link">
+                  Careers
+                </a>
               </li>
             </ul>
           </div>
           <div className="col-md-4">
-            <h5>Resources</h5>
+            <h5 className="footer-heading">Resources</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#">FAQs</a>
+                <a href="#" className="footer-link">
+                  FAQs
+                </a>
               </li>
               <li>
-                <a href="#">Documentation</a>
+                <a href="#" className="footer-link">
+                  Documentation
+                </a>
               </li>
               <li>
-                <a href="#">Support</a>
+                <a href="#" className="footer-link">
+                  Support
+                </a>
               </li>
             </ul>
           </div>
           <div className="col-md-4">
-            <h5>Follow Us</h5>
+            <h5 className="footer-heading">Follow Us</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#">Facebook</a>
+                <a href="#" className="footer-link">
+                  <FontAwesomeIcon icon={faFacebook} className="me-2" />
+                  Facebook
+                </a>
               </li>
               <li>
-                <a href="#">Twitter</a>
+                <a href="#" className="footer-link">
+                  <FontAwesomeIcon icon={faTwitter} className="me-2" />
+                  Twitter
+                </a>
               </li>
               <li>
-                <a href="#">Instagram</a>
+                <a href="#" className="footer-link">
+                  <FontAwesomeIcon icon={faInstagram} className="me-2" />
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="#" className="footer-link">
+                  <FontAwesomeIcon icon={faEnvelope} className="me-2" />
+                  Email
+                </a>
               </li>
             </ul>
           </div>

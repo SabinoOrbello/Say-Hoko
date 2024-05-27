@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { creaProdotto } from "../redux/postProductSlice";
+import { Link } from "react-router-dom";
 
 const CreaProdotto = () => {
   const [prodotto, setProdotto] = useState({
@@ -41,7 +42,7 @@ const CreaProdotto = () => {
   };
 
   return (
-    <div className="container w-50 pt-5 d-flex justify-content-center align-items-center ">
+    <div className="container w-50 pt-5 d-flex justify-content-center align-items-center mb-5 ">
       <form onSubmit={handleSubmit} className="w-75 bg-dark p-5 rounded-5 text-white">
         <h2 className="text-white text-center">CREA PRODOTTO</h2>
         <hr></hr>
@@ -184,9 +185,14 @@ const CreaProdotto = () => {
             </label>
           </div>
         </div>
-        <button type="submit" className="golden-button ms-5">
-          Aggiungi Prodotto
-        </button>
+        <div className="d-flex align-items-center justify-content-between">
+          <button type="submit" className="golden-button">
+            Aggiungi Prodotto
+          </button>
+          <Link to="/BackOffice" className="text-decoration-none pt-3 golden-button">
+            Torna Indietro
+          </Link>
+        </div>
       </form>
     </div>
   );
