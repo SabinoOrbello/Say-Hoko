@@ -25,7 +25,7 @@ const OrderHistory = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 higt p-5">
       <h2 className="text-gold">Storico Ordini</h2>
       {loading ? (
         <Loader />

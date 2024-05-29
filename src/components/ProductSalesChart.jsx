@@ -57,12 +57,14 @@ const ProductSalesChart = () => {
   }
 
   return (
-    <div className="container p-4 bg-dark w-50 m-5">
-      <button onClick={() => navigate("/backoffice")} className="golden-button mb-3">
-        Torna Indietro
-      </button>
-      <h2 className="text-white ms-5 ps-4">Prodotti Più Venduti</h2>
-      {content}
+    <div className="mt-5 p-5">
+      <div className="container p-5 bg-dark w-50 mt-5">
+        <button onClick={() => navigate("/backoffice")} className="golden-button mb-3">
+          Torna Indietro
+        </button>
+        <h2 className="text-white ms-5 ps-4">Prodotti Più Venduti</h2>
+        {content}
+      </div>
     </div>
   );
 };

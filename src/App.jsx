@@ -20,6 +20,7 @@ import OrderGet from "./components/OrderGet";
 import ProductSalesChart from "./components/ProductSalesChart";
 import Info from "./components/Info";
 import "mapbox-gl/dist/mapbox-gl.css";
+import CustomPokeBuilder from "./components/CustomPokeBuilder";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="/OrdiniUtenti" element={<OrderGet />} />
         <Route path="/ProductSalesChart" element={<ProductSalesChart />} />
         <Route path="/Info" element={<Info />} />
+        <Route path="/CustomPokeBuilder" element={<CustomPokeBuilder />} />
       </Routes>
       <Footer />
     </Router>

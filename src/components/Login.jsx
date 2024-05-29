@@ -49,7 +49,7 @@ export default function Login() {
   };
 
   return (
-    <div className="container w-50 pt-5 d-flex justify-content-center align-items-center p-5 ">
+    <div className="container w-50 pt-5 d-flex justify-content-center align-items-center p-5 mt-5 higt">
       <form onSubmit={handleSubmit} className="w-75 bg-dark p-5 rounded-5 text-white">
         <h2 className="text-white text-center">LOGIN</h2>
         <p className="text-center">Accedi al nostro portale</p>

@@ -28,7 +28,7 @@ function Hero() {
                 left: 0,
                 height: "100%",
                 width: "100%",
-                backgroundColor: "rgba(0,0,0,0.5)",
+                backgroundColor: "rgba(0,0,0,0.8)",
               }}
             ></div>
             <img className="w-100 carousel-img" src={risto1} alt="Ristorante Sushi"></img>
@@ -60,7 +60,7 @@ function Hero() {
                 left: 0,
                 height: "100%",
                 width: "100%",
-                backgroundColor: "rgba(0,0,0,0.5)",
+                backgroundColor: "rgba(0,0,0,0.8)",
               }}
             ></div>
             <img className="w-100 carousel-img" src={risto2} alt="Ristorante Sushi"></img>
@@ -71,13 +71,10 @@ function Hero() {
                 top: "75px", // Centra il testo se necessario
               }}
             >
-              <h3>Vieni a trovarci</h3>
-              <p className="mb-5">
-                Assapora l'eccellenza culinaria nel nostro ristorante : dove gusto e tradizione si fondono in un
-                esperienza indimenticabile!
-              </p>
-              <Link to="/info" type="submit" className="golden-button text-decoration-none pt-3">
-                Info
+              <h3>Crea la tua Pokè</h3>
+              <p className="mb-5">Crea la tua Pokè personalizzata con i migliori ingredienti freschi e di qualità</p>
+              <Link to="/CustomPokeBuilder" type="submit" className="golden-button text-decoration-none pt-3">
+                Crea Pokè
               </Link>
             </Carousel.Caption>
           </div>
@@ -95,7 +92,7 @@ function Hero() {
                 left: 0,
                 height: "100%",
                 width: "100%",
-                backgroundColor: "rgba(0,0,0,0.5)",
+                backgroundColor: "rgba(0,0,0,0.8)",
               }}
             ></div>
             <img className="w-100 carousel-img" src={risto3} alt="Ristorante Sushi"></img>

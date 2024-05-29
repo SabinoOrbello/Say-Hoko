@@ -20,7 +20,7 @@ const User = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 p-5">
       <h2 className="text-gold">Utenti Registrati</h2>
       <button onClick={() => navigate("/BackOffice")} className="golden-button mb-3">
         Torna Indietro

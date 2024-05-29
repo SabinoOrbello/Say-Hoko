@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import Puglia from "../assets/img/PUGLIA2.png";
+import Puglia from "../assets/img/loggo.png";
 import { resetCart } from "../redux/cartSlice";
 
 const navigation = [
@@ -12,6 +12,7 @@ const navigation = [
   { name: "Info", href: "/Info", current: false, requiresAuth: false },
   { name: "BackOffice", href: "/BackOffice", current: false, requiresAuth: true, role: "admin" },
   { name: "Cart", href: "/Cart", current: false, requiresAuth: true, icon: ShoppingCartIcon },
+  { name: "Crea Pokè", href: "/CustomPokeBuilder", current: false, requiresAuth: true },
 ];
 
 function classNames(...classes) {
@@ -61,7 +62,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img className="h-8 w-auto" src={Puglia} alt="Your Company" />
+                  <img className="h-8 w-auto rounded-5 " src={Puglia} alt="Your Company" />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

@@ -28,7 +28,7 @@ const OrderGet = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 p-5">
       <h2 className="text-gold">Ordini</h2>
       <button onClick={() => navigate("/backoffice")} className="golden-button mb-3">
         Torna Indietro

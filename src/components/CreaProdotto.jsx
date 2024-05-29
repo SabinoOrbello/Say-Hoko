@@ -42,7 +42,7 @@ const CreaProdotto = () => {
   };
 
   return (
-    <div className="container w-50 pt-5 d-flex justify-content-center align-items-center mb-5 ">
+    <div className="container w-50 pt-5 d-flex justify-content-center align-items-center mb-5 mt-5 ">
       <form onSubmit={handleSubmit} className="w-75 bg-dark p-5 rounded-5 text-white">
         <h2 className="text-white text-center">CREA PRODOTTO</h2>
         <hr></hr>
