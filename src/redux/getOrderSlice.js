@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const listOrders = createAsyncThunk("order/listOrders", async (_, thunkAPI) => {
   try {
-    const response = await axios.get("https://localhost:7052/api/ordini");
+    const response = await axios.get("https://say-hoko12.azurewebsites.net/api/ordini");
     return response.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data);

@@ -15,7 +15,7 @@ export const updateUserRole = createAsyncThunk("users/updateUserRole", async ({ 
   if (existingUser) {
     const updatedUser = { ...existingUser, role: newRole };
 
-    await axios.put(`https://localhost:7052/api/Utenti/${userId}`, updatedUser, {
+    await axios.put(`https://say-hoko12.azurewebsites.net/api/Utenti/${userId}`, updatedUser, {
       headers: {
         "Content-Type": "application/json",
       },

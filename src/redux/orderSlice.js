@@ -5,7 +5,7 @@ import axios from "axios";
 // Definire l'azione asincrona con createAsyncThunk
 export const createOrder = createAsyncThunk("order/createOrder", async (orderData, thunkAPI) => {
   try {
-    const response = await axios.post("https://localhost:7052/api/ordini", orderData);
+    const response = await axios.post("https://say-hoko12.azurewebsites.net/api/ordini", orderData);
     return response.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data);

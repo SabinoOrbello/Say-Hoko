@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://localhost:7052/api/Utenti/Login", {
+      const response = await axios.post("https://say-hoko12.azurewebsites.net/api/Utenti/Login", {
         nome,
         password,
       });

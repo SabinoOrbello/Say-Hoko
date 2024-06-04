@@ -2,7 +2,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const registerUser = createAsyncThunk("registration/registerUser", async (userData, thunkAPI) => {
-  const response = await fetch("https://localhost:7052/api/Utenti", {
+  const response = await fetch("https://say-hoko12.azurewebsites.net/api/Utenti", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

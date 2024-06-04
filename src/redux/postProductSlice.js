@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const creaProdotto = createAsyncThunk("prodotti/creaProdotto", async (prodotto) => {
-  const response = await fetch("https://localhost:7052/api/Prodotti", {
+  const response = await fetch("https://say-hoko12.azurewebsites.net/api/Prodotti", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

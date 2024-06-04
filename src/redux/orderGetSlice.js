@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Fetch orders
 export const fetchOrders = createAsyncThunk("orderGet/fetchOrders", async () => {
-  const response = await axios.get("https://localhost:7052/api/ordini");
+  const response = await axios.get("https://say-hoko12.azurewebsites.net/api/ordini");
   return response.data;
 });
 

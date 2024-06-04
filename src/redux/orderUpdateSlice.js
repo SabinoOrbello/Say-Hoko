@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const updateOrderStatus = createAsyncThunk("orderUpdate/updateOrderStatus", async ({ orderId, newState }) => {
   const response = await axios.put(
-    `https://localhost:7052/api/ordini/${orderId}`,
+    `https://say-hoko12.azurewebsites.net/api/ordini/${orderId}`,
     {
       stato: newState,
     },
