@@ -332,3 +332,9 @@ li {
 .higt1 {
   min-height: 50vh;
 }
+
+.col-md-3.sticky-top {
+  position: sticky;
+  top: 100px; /* Assicurati che questa sia la distanza giusta dalla cima della pagina */
+  z-index: 900; /* Assicurati che il valore sia inferiore a quello della navbar */
+}
